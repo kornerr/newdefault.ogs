@@ -1,0 +1,11 @@
+<compositor>
+    <texture name="boxNormal" template="textureTemplate">
+        <file>pipeline/textures/box_n.png</file>
+    </texture>
+    <texture name="columnDiffuse" template="textureTemplate">
+        <file>pipeline/textures/cement.png</file>
+    </texture>
+    <texture name="subjectDiffuseRed" template="textureTemplate">
+        <file>pipeline/textures/subjectRed.png</file>
+    </texture>
+</compositor>
