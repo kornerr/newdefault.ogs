@@ -3,11 +3,12 @@ node
     default
         light
             parent = ROOT
-            position = 0 -5 10
+            position = 0 10 10
             light = default
         center
             parent = ROOT
             model = models/box.osgt
+            position = 0 1 0
         left
             parent = ROOT
             position = -2.000000 0.000000 0.000000
