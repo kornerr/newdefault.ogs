@@ -33,4 +33,4 @@ node
             scale = 10 10 1
             material = subjectRed
             model = models/box.osgt
-            script = scripts/TrackNodeLifeTime.py
+            script = scripts/Main.py
