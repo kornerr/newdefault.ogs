@@ -2,7 +2,7 @@
 import pymjin2
 
 class TrackNodeLifeTime:
-    def __init__(self, sceneName, nodeName, scene):
+    def __init__(self, sceneName, nodeName, scene, action):
         print "TrackNodeLifeTime({0}). START. scene: {1} node: {2}".format(
             id(self),
             sceneName,
@@ -16,8 +16,8 @@ class TrackNodeLifeTime:
             self.sceneName,
             self.nodeName)
 
-def SCRIPT_CREATE(sceneName, nodeName, scene):
-    return TrackNodeLifeTime(sceneName, nodeName, scene)
+def SCRIPT_CREATE(sceneName, nodeName, scene, action):
+    return TrackNodeLifeTime(sceneName, nodeName, scene, action)
 
 def SCRIPT_DESTROY(instance):
     del instance
