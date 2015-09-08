@@ -13,3 +13,21 @@ moveBy
             point = 500 0 0 0
 # TODO: Remove after testing
             node = default.center
+        moveLeft2
+            point = 0 0 0 0
+            point = 3000 0 1 0
+            point = 1000 0 -1 0
+            point = 1000 0 1 0
+            point = 2000 0 -1 0
+            point = 500 0 0 0
+# TODO: Remove after testing
+            node = default.left
+        moveLeftDuplicate
+            point = 0 0 0 0
+            point = 300 1 0 0
+            point = 100 -1 0 0
+            point = 100 1 0 0
+            point = 200 -1 0 0
+            point = 500 0 0 0
+# TODO: Remove after testing
+            node = default.center

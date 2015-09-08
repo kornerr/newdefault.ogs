@@ -28,8 +28,11 @@ class MainImpl(object):
         # Toggle active property.
 #        self.actionEnabled = not self.actionEnabled
 #        value = "1" if self.actionEnabled else "0"
+        #st.set("moveBy.default.moveLeft2.node", "{0}.{1}".format(self.sceneName, nodeName))
+
         st.set("moveBy.default.moveLeft.active", "1")
-        st.set("moveBy.default.moveLeft.node", "{0}.{1}".format(self.sceneName, nodeName))
+        st.set("moveBy.default.moveLeft2.active", "1")
+        st.set("moveBy.default.moveLeftDuplicate.active", "1")
 
         self.action.setState(st)
         print "Main: node selected. END", nodeName
