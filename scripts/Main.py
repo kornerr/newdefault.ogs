@@ -8,7 +8,7 @@ class MainImpl(object):
         self.action    = action
         self.sceneName = sceneName
         self.nodeName  = nodeName
-        self.actionEnabled = False
+        #self.actionEnabled = False
     def __del__(self):
         # Derefer.
         self.scene  = None
@@ -26,9 +26,10 @@ class MainImpl(object):
         st = pymjin2.State()
 
         # Toggle active property.
-        self.actionEnabled = not self.actionEnabled
-        value = "1" if self.actionEnabled else "0"
-        st.set("moveBy.default.moveLeft.active", value)
+#        self.actionEnabled = not self.actionEnabled
+#        value = "1" if self.actionEnabled else "0"
+        st.set("moveBy.default.moveLeft.active", "1")
+        st.set("moveBy.default.moveLeft.node", "{0}.{1}".format(self.sceneName, nodeName))
 
         self.action.setState(st)
         print "Main: node selected. END", nodeName
