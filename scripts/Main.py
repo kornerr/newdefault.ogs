@@ -24,16 +24,8 @@ class MainImpl(object):
         self.scene.setState(st)
         print "Main: launching 'moveLeft' action"
         st = pymjin2.State()
-
-        # Toggle active property.
-#        self.actionEnabled = not self.actionEnabled
-#        value = "1" if self.actionEnabled else "0"
-        #st.set("moveBy.default.moveLeft2.node", "{0}.{1}".format(self.sceneName, nodeName))
-
-        st.set("moveBy.default.moveLeft.active", "1")
-        st.set("moveBy.default.moveLeft2.active", "1")
-        st.set("moveBy.default.moveLeftDuplicate.active", "1")
-
+        #st.set("sequence.default.mainSeq.active", "1")
+        st.set("repeat.default.mainSeqTwice.active", "1")
         self.action.setState(st)
         print "Main: node selected. END", nodeName
 
@@ -44,10 +36,10 @@ class MainListenerAction(pymjin2.ComponentListener):
     def __del__(self):
         self.impl = None
     def onComponentStateChange(self, st):
-        print "MainListenerAction state change"
+        #print "MainListenerAction state change"
         for k in st.keys:
             value = st.value(k)[0]
-            print k, value
+            print "MainListenerAction", k, value
             #self.impl.selectNode(value)
 
 class MainListenerScene(pymjin2.ComponentListener):
@@ -74,7 +66,7 @@ class Main:
         # Prepare.
         key = "selector.{0}.selectedNode".format(sceneName)
         self.scene.addListener([key], self.listenerScene)
-        key = "delay...active"
+        key = "...active"
         self.action.addListener([key], self.listenerAction)
     def __del__(self):
         # Tear down.
