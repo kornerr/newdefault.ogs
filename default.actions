@@ -25,9 +25,9 @@ moveBy
         shakeUp
             point = 0 0 0 0
             point = 300 0 0 1
+            point = 50 0 0 -1
+            point = 50 0 0 1
             point = 100 0 0 -1
-            point = 100 0 0 1
-            point = 200 0 0 -1
             point = 500 0 0 0
 # TODO: Remove after testing
             node = default.center
@@ -67,6 +67,6 @@ repeat
 speed
     default
         fastMain
-            rate = 3
+            rate = 2
             action = repeat.mainSeqTwice
 
