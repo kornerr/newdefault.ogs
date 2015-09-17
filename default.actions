@@ -64,3 +64,9 @@ repeat
         mainSeqTwice
             n = 2
             action = sequence.mainSeq
+speed
+    default
+        fastMain
+            rate = 3
+            action = repeat.mainSeqTwice
+

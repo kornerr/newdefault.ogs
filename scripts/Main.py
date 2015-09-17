@@ -25,7 +25,8 @@ class MainImpl(object):
         print "Main: launching 'moveLeft' action"
         st = pymjin2.State()
         #st.set("sequence.default.mainSeq.active", "1")
-        st.set("repeat.default.mainSeqTwice.active", "1")
+        #st.set("repeat.default.mainSeqTwice.active", "1")
+        st.set("speed.default.fastMain.active", "1")
         self.action.setState(st)
         print "Main: node selected. END", nodeName
 
