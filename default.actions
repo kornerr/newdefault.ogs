@@ -58,22 +58,25 @@ script
         printAnything
             node = default.center
             script = scripts/actions/PrintAnything.py
+        rotateMaterial
+            node = default.center
+            script = scripts/actions/RotateMaterial.py
 sequence
     default
         mainSeq
-            action = script.printAnything
+            action = script.rotateMaterial
             action = spawn.moveLeftAndShake
             action = delay.blinkDelay
+            action = script.rotateMaterial
             action = spawn.moveForwardAndShake
-            action = script.printAnything
 repeat
     default
         mainSeqTwice
-            n = 2
+            n = 3
             action = sequence.mainSeq
 speed
     default
         fastMain
-            rate = 1
+            rate = 3
             action = repeat.mainSeqTwice
 
