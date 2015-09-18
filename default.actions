@@ -53,12 +53,19 @@ spawn
         moveForwardAndShake
             action = moveBy.moveForward
             action = moveBy.shakeLeft
+script
+    default
+        printAnything
+            node = default.center
+            script = scripts/actions/PrintAnything.py
 sequence
     default
         mainSeq
+            action = script.printAnything
             action = spawn.moveLeftAndShake
             action = delay.blinkDelay
             action = spawn.moveForwardAndShake
+            action = script.printAnything
 repeat
     default
         mainSeqTwice
@@ -67,6 +74,6 @@ repeat
 speed
     default
         fastMain
-            rate = 2
+            rate = 1
             action = repeat.mainSeqTwice
 

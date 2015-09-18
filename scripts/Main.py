@@ -18,15 +18,15 @@ class MainImpl(object):
         if (nodeName == self.nodeName):
             print "Main: PARENT node selected. Do nothing. END", nodeName
             return
+#        st = pymjin2.State()
+#        key = "node.{0}.{1}.script".format(self.sceneName, nodeName)
+#        st.set(key, "scripts/TrackNodeLifeTime.py")
+#        self.scene.setState(st)
+        print "Main: launching 'fastMain' action"
         st = pymjin2.State()
-        key = "node.{0}.{1}.script".format(self.sceneName, nodeName)
-        st.set(key, "scripts/TrackNodeLifeTime.py")
-        self.scene.setState(st)
-        print "Main: launching 'moveLeft' action"
-        st = pymjin2.State()
-        #st.set("sequence.default.mainSeq.active", "1")
-        #st.set("repeat.default.mainSeqTwice.active", "1")
         st.set("speed.default.fastMain.active", "1")
+#        print "Main: changing 'script' property"
+#        st.set("script.default.printAnything.script", "scripts/actions/PrintEverything.py")
         self.action.setState(st)
         print "Main: node selected. END", nodeName
 
