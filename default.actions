@@ -61,10 +61,15 @@ script
         rotateMaterial
             node = default.center
             script = scripts/actions/RotateMaterial.py
+        customDelay
+            script = scripts/actions/CustomDelay.py
+        runCustomDelay
+            script = scripts/actions/RunCustomDelay.py
 sequence
     default
         mainSeq
             action = script.rotateMaterial
+            action = script.runCustomDelay
             action = spawn.moveLeftAndShake
             action = delay.blinkDelay
             action = script.rotateMaterial

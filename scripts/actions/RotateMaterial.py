@@ -33,7 +33,7 @@ class RotateMaterial:
         st = pymjin2.State()
         key = "node.{0}.{1}.material".format(self.sceneName, self.nodeName)
         value = self.materials[materialID]
-        print key, value
+        #print key, value
         st.set(key, value)
         self.scene.setState(st)
         return False
